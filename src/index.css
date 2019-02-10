@@ -33,18 +33,21 @@ label {
   margin: 5px 0 0;
 }
 
-.container {
+.widget_field .container {
   width: 300px;
   margin: 0 auto;
   border: 1px solid #586474;
   position: absolute;
   left: 0;
-  top: 54px;
+  top: 53px;
   background: #fff;
   z-index: 2;
   display: none;
 }
-.container.active {
+.widget_field:nth-child(even) .container {
+  left: 5px;
+}
+.widget_field .container.active {
   display: block;
 }
 
@@ -188,6 +191,9 @@ label {
 
 .widget_datepicker .widget_field_range .widget_field input {
   padding: 0 5px
+}
+.widget_datepicker .widget_field_range .widget_field input:focus {
+  border-color: #586474;
 }
 
 .widget_datepicker .widget_field_range .widget_field.calendar_icon::before {
